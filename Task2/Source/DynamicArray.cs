@@ -60,7 +60,6 @@ namespace Task2.Source
         }
 
 
-
         public void Add(Type value)
         {
             Resize(1);
@@ -155,7 +154,6 @@ namespace Task2.Source
         }
 
 
-
         public static implicit operator Type[]?(DynamicArray<Type> obj)
         {
             return obj._array.Clone() as Type[];
@@ -188,14 +186,12 @@ namespace Task2.Source
                 return false;
             }
 
-            int iIndx = 0;
-            foreach (var item in list)
+            for (int iIndx = 0; iIndx < Length; iIndx++)
             {
-                if (!this[iIndx].Equals(item))
+                if (!this[iIndx].Equals(_array[iIndx]))
                 {
                     return false;
                 }
-                iIndx++;
             }
             return true;
         }
@@ -208,7 +204,6 @@ namespace Task2.Source
             }
             return res;
         }
-
 
 
         public IEnumerator<Type> GetEnumerator()

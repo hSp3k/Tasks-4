@@ -15,21 +15,21 @@ namespace Task2
             DynamicArray<int> obj2 = new DynamicArray<int>();
 
             obj1.CapacityChanged += CapacityChanged;
-            obj1.CapacityChanged += CapacityChanged;
 
             int[] array1 = { 1, 2, 3, 4, 10 };
             int[] array2 = { 10, 4, 3, 2, 1 };
 
-            
+            obj1.AddRange(array1);
+            obj1.AddRange(array2);
+            obj1.Add(10);
+            obj1.RemoveAll(2);
+            Console.WriteLine(obj1.Equals(obj2));
+            obj1.Insert(10, 2);
 
-            obj1.AddRange(array1);
-            obj1.AddRange(array1);
-            obj1.AddRange(array1);
-            obj1.AddRange(array1);
-            obj1.AddRange(array1); 
-            obj1.AddRange(array1);
-            obj1.AddRange(array1);
+            Console.WriteLine(obj1 == obj2);
+            Console.WriteLine(obj1 != obj2);
 
+            Console.WriteLine(obj1.GetHashCode());
 
             foreach (var item in obj1)
             {

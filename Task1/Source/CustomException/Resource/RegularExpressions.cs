@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Task1.Source
+namespace Task1.Source.CustomException.ResourceException
 {
     internal class RegularExpressions
     {
